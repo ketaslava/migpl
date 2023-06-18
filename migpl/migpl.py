@@ -1,5 +1,6 @@
 import subprocess
 import keyboard
+import time
 
 # ======= SETTINGS ======= #
 
@@ -8,12 +9,13 @@ export_template_path = "templates/linux_debug.x86_64"
 key_run = 'f3'
 key_stop = 'f4'
 
-process_instances_count = 5
+process_instances_count = 3
 array_process_arguments = [
-    ["Arg1", "Arg2"], # First instance arguments
-    ["Arg1", "Arg2"], # Second instance arguments
-    ["Arg1"], # Third instance arguments
+    ["Arg1", "Arg2"],  # First instance arguments
+    ["Arg1", "Arg2", "Arg3"],  # Second instance arguments
+    ["Arg1"],  # Third instance arguments
 ]
+array_process_delays = [0.0, 0.0, 0.5]  # Delay before start process to start on top of others
 
 # ======= ======== ======= #
 
@@ -23,6 +25,7 @@ new_command = []
 
 def processes_run(queue_position):
     global processes, export_template_path, new_command
+    # Combine command
     args = []
     new_command = []
     if not queue_position >= len(array_process_arguments):
@@ -31,6 +34,13 @@ def processes_run(queue_position):
     new_command.append(export_template_path)
     for arg in args:
         new_command.append(str(arg))
+    # Delay before start
+    delay = 0.0
+    if not queue_position >= len(array_process_delays):
+        if isinstance(array_process_delays[queue_position], float):
+            delay = array_process_delays[queue_position]
+    time.sleep(delay)
+    # Run process
     print(">> Run command array " + str(new_command) + " \n")
     processes.append(subprocess.Popen(new_command))
     pass
