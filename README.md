@@ -29,7 +29,7 @@ The script was developed by Ketoslava Ket and KTVINCCO and is available for use 
 
 3. Open terminal as admin or use sudo
 
-4. Use "pip install" to install all requirements from requirements.txt for python3
+4. Use "pip install -r requirements.txt" to install all requirements from requirements.txt for python3
 
 5. Copy migpl.py to root directory of your project (where there is a project.godot file)
 
