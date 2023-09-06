@@ -8,6 +8,7 @@ export_template_path = "templates/linux_debug.x86_64"
 
 key_run = 'f3'
 key_stop = 'f4'
+is_enable_auto_start = False
 
 process_instances_count = 3
 array_process_arguments = [
@@ -91,8 +92,13 @@ https://github.com/ketoslavaket/migpl
 instrunction:
 * Press {key_run} to run processes
 * Press {key_stop} to stop all processes
+* Is enable auto start: {is_enable_auto_start}
 * Change other parameters in the script settings
 \n""")
+    # Auto start
+    if is_enable_auto_start:
+        run_all()
+    # Loop
     while True:
         pass
 
