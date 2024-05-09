@@ -1,6 +1,6 @@
 # MIGPL
 
-Multi instance Godot project loader
+Multi instance Godot project launcher
 
 # About
 
