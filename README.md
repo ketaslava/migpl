@@ -14,28 +14,26 @@ MIGPL is a script for automating the launch of a game project on the Godot Engin
 
 # Creators and contacts
 
-The script was developed by Ketoslava Ket and KTVINCCO and is available for use under the MIT license
+The script was developed by Ketoslava Ket and KTVINCCO and available for use under the MIT license
 
 [Copyright Declaration](http://ktvincco.com/copyrightdeclaration/)
-[Contact Ketoslava Ket](http://ktvincco.com/keta/contacts/)
+[Contact Ketoslava Ket](http://ktvincco.com/ketoslava/contacts/)
 
 # Instruction
-
-* You can watch the tutorial on YouTube (https://youtu.be/fI239ocDA2E)
 
 1. Download or clone repository
 
 2. Extract migpl.zip and go to the master/migpl/ folder
 
-3. Open terminal as admin or use sudo
+3. Open terminal as admin
 
 4. Use "pip install -r requirements.txt" to install all requirements from requirements.txt for python3
 
 5. Copy migpl.py to root directory of your project (where there is a project.godot file)
 
-6. Go to the https://godotengine.org/ , click download (once), scroll down and download Export templates
+6. Go to the https://godotengine.org/ , click download (once), scroll down and download Export Templates
 
-7. Extract Export templates, and copy them to root directory of your project -> GodotProject/templates/[ManyFiles]
+7. Extract Export Templates, and copy them to root directory of your project -> GodotProject/templates/*ExtractTemplatesFiles*
 
 8. Open migpl.py and set export_template_path = "templates/YourSystemName.template"
 
